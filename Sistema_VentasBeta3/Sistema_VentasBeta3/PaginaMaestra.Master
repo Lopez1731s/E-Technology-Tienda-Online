@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="Sistema_VentasBeta3.PaginaMaestra" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link href="Content/icofont.min.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/animate.min.css" rel="stylesheet" />
+    <link href="Content/aos.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a02ddcc47f.js" crossorigin="anonymous"></script>
+    <title>E-Tecnology</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <form id="form1" runat="server">
+        <div>
+            <div class="main_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <li><asp:Label ID="Nombre_usuario" runat="server" Text=""></asp:Label></li>
+                        </div>
+                        <div class="col-8 d-flex flex-row-reverse">
+                            <li><asp:LinkButton ID="btn_login" runat="server" OnClick="btn_login_Click">Login</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="btn_registrar" runat="server" OnClick="btn_registrar_Click">Registrarse</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="logout" runat="server" OnClick="logout_Click"><i class="fas fa-sign-out-alt"></i></asp:LinkButton></li>
+                            <asp:LinkButton ID="profile" runat="server" OnClick="profile_Click"><i class="fas fa-user"></i></asp:LinkButton>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <header id="header">
+                <div class="container">
+                    <div class="logo float-left">
+                        <h4 class="font-weight-light"><asp:LinkButton ID="Inicio" runat="server" OnClick="Inicio_Click">E-Tecnology</asp:LinkButton></h4>
+                    </div>
+                    <nav class="nav-menu float-right d-none d-lg-block">
+                        <ul>
+                            <li><asp:LinkButton ID="btn_Productos" runat="server" OnClick="btn_Productos_Click">Productos</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="btn_Servicios" runat="server" OnClick="btn_Servicios_Click">Servicios</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="btn_Ofertas" runat="server" OnClick="btn_Ofertas_Click">Ofertas</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="btn_Contact" runat="server" OnClick="btn_Contact_Click">Contacto</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="btn_faq" runat="server" OnClick="btn_faq_Click">F.A.Q</asp:LinkButton></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+            <footer class="py-5 bg-dark" style="margin-bottom: auto;">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Copyright © E-Tecnology</p>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/aos.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/jquery.sticky.js"></script>
+    <script src="Scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>
